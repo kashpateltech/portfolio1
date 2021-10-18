@@ -22,7 +22,7 @@ body{
 
 header {
     background-color:var(--dark);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 87%, 0 100%);
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 87%, 0 100%); */
 }
 
 .container {
@@ -231,9 +231,6 @@ section.services .card-wrapper {
     text-decoration: none;
 }
 
-#box1 h2{
-    margin-top: 15%;
-}
 
 #contact{
     box-sizing: border-box;
@@ -370,6 +367,36 @@ h2{
 
 
 @media (min-width:601px) and (max-width:1100px){
+
+    * {
+      overflow-x: hidden;  
+    }
+
+    .hero .right {
+        margin: 0;
+    }
+
+    #main-text h1 {
+        overflow-y: hidden;
+    }
+
+    section {
+        padding: 2rem 0;
+    }
+
+    #my-work {
+        padding: 2rem 0;
+    }    
+    
+    section.about .about-me-img {
+        height: 706px;
+    }
+
+    section.services .card-wrapper {
+        grid-template-rows: 4fr 2.5fr 2.5fr;
+        column-gap: normal;
+    }
+
     #list{
         font-size: 0.9rem;
     }
@@ -396,9 +423,85 @@ h2{
      #main-text{
         margin-left: 1%;
         }
+   }
 
+   @media screen and (max-width: 480px)
+   { 
 
-
+* {
+        overflow-x: hidden;
+        width: 100%;
     }
 
+header{ 
+        width: 101vw;
+        clip-path: none;
+        overflow: hidden;
+   }
+
+.hero {
+    flex-direction: column;
+    padding: 0;
+   }
+
+#pic2 {
+    width: 146%;
+   }
+
+#main-text {
+    margin: 0 !important;
+    padding: 1.2rem;
+   }
+
+.about-me-img {
+    display: none;
+   }
+
+#about, my-work {
+    padding: 1rem 0;
+   }
+
+#about-me, .social {
+   display: block;
+   }
+
+#my-work {
+  padding: 2rem 0;
+   }
+
+.section-heading + p {
+    margin-bottom: 1rem;
+}
+section {
+    padding: 2rem 0;
+}
+
+section.services .card-wrapper {
+    grid-template-rows: 2fr 2fr 2fr;
+    column-gap: normal;
+}
+
+header nav {
+    padding: 1rem 0;
+    flex-wrap: wrap;
+}
+
+header nav .branding {
+    margin-right: 6rem;
+}
+
+#list {
+    padding: 1.2rem;
+}
+
+#contact-nav {
+    flex-direction: column;
+}
+
+.branding {
+    width: 68%;
+}
+
+
+   }
 
