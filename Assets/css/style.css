@@ -6,7 +6,8 @@
     --pure:#FFFFFF;
     --ternary:#898989;
     --light:#F2F2F2;
-    --secondary: #070606 
+    --secondary: #070606; 
+    --mild: #34c3eb;
 }
 
 body{
@@ -216,8 +217,9 @@ section.services .card-wrapper {
     row-gap: 6rem;*/
     grid-template-areas: 
     'box1 box1'
-    'box2 box3'
-    'box4 box5';
+    'box2 box2'
+    'box4 box4'
+    'box5 box5';
     grid-template-rows: 2.5fr 1fr 1fr;
     row-gap: 2rem;
     column-gap: 1rem;
@@ -298,6 +300,9 @@ section.services .card-wrapper .card:hover h2{
     color: var(--pure);
 }
 
+#box1:hover p, #box1:hover h2  {
+    color: var(--mild);
+}
 
 h2{
     color: var(--dark);
